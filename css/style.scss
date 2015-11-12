@@ -1,0 +1,421 @@
+$blueGr: linear-gradient(45deg, rgba(146, 39, 143, 0.7), rgba(0, 122, 194, 0.7));
+$blueGrS: linear-gradient(45deg, rgba(146, 39, 143, 1), rgba(0, 122, 194, 1));
+$redGr: linear-gradient(45deg, rgba(237,20,91,0.7), rgba(244,119,34, 0.7));
+$redGrS: linear-gradient(45deg, rgba(237,20,91,1), rgba(244,119,34, 1));
+$greenGr: linear-gradient(45deg, rgba(186, 191, 16, 0.7), rgba(0, 174, 239, 0.7));
+$greenGrS: linear-gradient(45deg, rgba(186, 191, 16, 1), rgba(0, 174, 239, 1));
+$yellowGrS: linear-gradient(45deg, rgba(186, 191, 16, 1), rgba(244, 119, 34, 1));
+$gray: #6d6e71;
+\ html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*---------- Navigation ----------*/
+.mainNav {
+  width: 100%;
+  display: flex;
+  .arrowToSite {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-top: 5px solid #cecece;
+    border-right: 5px solid #cecece;
+    transform: rotate(45deg);
+    right: 10px;
+    top: 50px;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
+  }
+  .arrowToSite:hover,
+  .arrowToSite:active {
+    border-color: #00aeef;
+    width: 15px;
+    height: 15px;
+  }
+  .logo {
+    margin: auto;
+  }
+  .logo img {
+    max-height: 100%;
+    max-width: 150px;
+  }
+  .toSite {
+    display: none;
+    right: 15px;
+    top: 50px;
+  }
+}
+
+/*---------- Hero ----------*/
+.hero {
+  height: 60vh;
+}
+.heroContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  .heroBgImg {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: Montserrat;
+      font-size: 2.5em;
+      font-weight: 700;
+      margin: 0;
+      padding: 0 10px;
+    }
+    h2 {
+      font-weight: 300;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+  .heroIcon {
+    width: 50%;
+    height: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.heroGlobal {
+  background-image: url("../assets/global.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .heroIconGlobe {
+    background-image: url("../assets/globe.png");
+  }
+  .heroGlobalBgImg {
+    background: $greenGr;
+  }
+}
+.heroChange {
+  background-image: url("../assets/change.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .heroIconBulb {
+    background-image: url("../assets/bulb.png");
+  }
+  .heroChangeBgImg {
+    background: $redGr;
+  }
+}
+.heroYourself {
+  background-image: url("../assets/yourself.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .heroIconTag {
+    background-image: url("../assets/Tag.png");
+  }
+  .heroYourselfBgImg {
+    background: $blueGr;
+  }
+}
+.heroApply {
+  background-color: #007ac2;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  width: 40%;
+  max-width: 150px;
+  padding: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.heroApply:hover,
+.heroApply:active {
+  background-color: darken(#007ac2, 10% );
+}
+
+/*----------- Social Media Nav -----------------*/
+.socialMedia {
+  margin: auto;
+  padding: 16px;
+  h1 {
+    color: $gray;
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .sm {
+    margin: auto;
+    max-width: 250px;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    li div {
+      height: 50px;
+      width: 50px;
+      text-indent: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .fbImg {
+      background-image: url("../assets/fb.png");
+    }
+    .igImg {
+      background-image: url("../assets/ig.png");
+    }
+    .twImg {
+      background-image: url("../assets/tw.png");
+    }
+    .ytImg {
+      background-image: url("../assets/yt.png");
+    }
+  }
+}
+
+/*------------- Pilars -----------------*/
+.pilars {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  padding-bottom: 0;
+  a {
+    text-decoration: none;
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-family: Montserrat;
+    font-weight: 400;
+    text-align: center;
+    color: #007ac2;
+    letter-spacing: 0.1px;
+  }
+}
+.circle {
+  margin: auto;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+.icon {
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+.icon:hover,
+.icon:active {
+  background-size: 110%;
+  -webkit-transform: rotate(10deg);
+   transform: rotate(10deg);
+}
+.study {
+  .studyCr {
+    background: $redGrS;
+    .studyIcon {
+      background-image: url("../assets/afsTag.png");
+    }
+  }
+}
+.host {
+  .hostCr {
+    background: $greenGrS;
+    .hostIcon {
+      background-image: url("../assets/door.png");
+    }
+  }
+}
+.volunteer {
+  .volunteerCr {
+    background: $blueGrS;
+    .volunteerIcon {
+      background-image: url("../assets/hand.png");
+    }
+  }
+}
+.why {
+  .whyCr {
+    background: $yellowGrS;
+    .whyIcon {
+      background-image: url("../assets/puzzle.png");
+    }
+  }
+}
+/*------ Snapwidget ------*/
+.igFeed {
+  padding: 0 40px;
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
+/*------- Footer -------*/
+footer {
+  a {
+    font-weight: 400;
+    color: $gray;
+    text-align: center;
+    text-decoration: none;
+    h1 {
+      font-weight: 400;
+      font-size: 1.5em;
+      padding: 24px;
+    }
+    a:hover,
+    a:active {
+      color: #007ac2;
+      text-decoration: underline;
+    }
+  }
+}
+
+/*--------- Media Queries ---------*/
+@media screen and (min-width: 600px) {
+  .heroContent {
+    h2 {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+  .mainNav {
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: $gray;
+    }
+    a:hover,
+    a:active {
+      text-decoration: underline;
+      color: #007ac2;
+    }
+    .arrowToSite {
+      display: none;
+    }
+    .toSite {
+      display: block;
+      margin-top: 50px;
+      margin-right: 16px;
+    }
+    .logo {
+      margin: 0;
+    }
+  }
+  .pilars {
+    padding: 40px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      width: 50%;
+    }
+  }
+}
+@media screen and (min-width: 840px) {
+  .heroContent {
+    font-size: 115%;
+  }
+  .socialMedia {
+    h1 {
+      font-size: 130%;
+    }
+  }
+}
+@media screen and (min-width: 960px) {
+  .pilars {
+    justify-content: space-between;
+    a {
+      width: 25%;
+    }
+    h2 {
+      margin: 8px auto;
+      font-size: 185%;
+      max-width: 150px;
+    }
+    .circle {
+      height: 175px;
+      width: 175px;
+    }
+    .icon {
+      height: 175px;
+      width: 175px;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainNav {
+    max-width: 90%;
+    margin: auto;
+  }
+  .pilars {
+    max-width: 1280px;
+    .circle {
+      height: 200px;
+      width: 200px;
+    }
+    .icon {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .socialMedia {
+    order: 2;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    h1 {
+      font-size: 160%;
+    }
+    .sm {
+      max-width: 300px;
+    }
+    .sm li div {
+      height: 65px;
+      width: 65px;
+    }
+  }
+  .igFeed {
+    order: 3;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .heroContent {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .heroglobal{
+    background-position: 0 -200px;
+  }
+}
